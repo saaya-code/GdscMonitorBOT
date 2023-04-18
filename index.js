@@ -1,4 +1,6 @@
 const { Client, Events, GatewayIntentBits } = require('discord.js');
+const mongoose = require('mongoose');
+const connectDB = require('./db/connect');
 const fs = require('node:fs');
 const path = require('node:path');
 require("dotenv").config();
@@ -31,9 +33,11 @@ client.on(Events.InteractionCreate, async interaction => {
 
 client.once(Events.ClientReady, (client) => {
     console.log(`Logged in as ${client.user.tag}!`);
+	connectDB(process.env.MONGO_URI);
 });
 
 
 
 
 client.login(TOKEN);
+
