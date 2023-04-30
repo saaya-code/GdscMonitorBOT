@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node deploy.js && node index.js",
-    "deploy":"node deploy.js",
+    "deploy": "node deploy.js",
     "dev": "node index.js"
   },
   "repository": {
@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/saaya-code/GdscMonitorBOT#readme",
   "dependencies": {
+    "@discordjs/voice": "^0.16.0",
     "discord.js": "^14.9.0",
     "mongoose": "^7.0.3"
   },
